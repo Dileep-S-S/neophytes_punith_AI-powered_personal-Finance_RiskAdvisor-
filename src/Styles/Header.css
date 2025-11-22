@@ -1,0 +1,46 @@
+.header-nav {
+  background: #003366;
+  padding: 15px;
+  border-bottom: 3px solid #00509e;
+}
+
+.nav-link {
+  font-size: 18px;
+  margin-right: 15px;
+}
+
+.nav-link:hover {
+  color: #66a3ff !important;
+}
+.header-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+.header-logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Logout button */
+.logout-btn {
+  background-color: #00509e;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #003366;
+}
+
+/* Optional small fix for spacing */
+.logo-link {
+  display: flex;
+  align-items: center;
+}

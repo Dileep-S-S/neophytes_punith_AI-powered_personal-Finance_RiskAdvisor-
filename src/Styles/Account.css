@@ -1,0 +1,163 @@
+:root {
+  --dark: #003366;
+  --deep: #00509e;
+  --primary: #007acc;
+  --soft: #66a3ff;
+  --light: #cce0ff;
+  --text: #002244;
+}
+
+.account-container {
+  min-height: 100vh;
+  background: linear-gradient(#cce0ff, #66a3ff);
+  padding: 25px;
+}
+
+/* HEADER */
+.account-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-header h2 {
+  color: var(--dark);
+  font-weight: 700;
+}
+
+.sub {
+  color: var(--text);
+  margin: 0;
+}
+
+.logout-btn {
+  background: var(--deep);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: var(--dark);
+}
+
+/* LAYOUT */
+.account-grid {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 20px;
+}
+
+/* LEFT CARD */
+.left-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  border-left: 5px solid var(--primary);
+}
+
+.profile-row {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary), var(--deep));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+}
+
+.user-meta .user-name {
+  margin: 0;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.email {
+  margin: 2px 0;
+  font-size: 14px;
+  color: var(--primary);
+}
+
+.bank-info {
+  color: var(--text);
+  font-size: 13px;
+}
+
+.details-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.detail-box {
+  background: var(--light);
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.label {
+  color: var(--dark);
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+/* RIGHT CARD */
+.right-card {
+  background: white;
+  padding: 20px;
+  border-radius: 14px;
+  border-left: 5px solid var(--primary);
+}
+
+.right-title {
+  color: var(--dark);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.action-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.action-btn {
+  background: var(--deep);
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+}
+
+.action-btn:hover {
+  background: var(--dark);
+}
+
+.tip {
+  margin-top: 12px;
+  color: var(--dark);
+  font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .account-grid {
+    grid-template-columns: 1fr;
+  }
+}

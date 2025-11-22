@@ -1,0 +1,214 @@
+:root {
+  --dark: #003366;
+  --deep: #00509e;
+  --primary: #007acc;
+  --soft: #66a3ff;
+  --light: #cce0ff;
+  --text-dark: #002244;
+  --text: #003366;
+}
+
+/* FULL PAGE */
+.overview-container {
+  background: linear-gradient(#cce0ff, #66a3ff);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* HEADER */
+.overview-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.overview-header h2 {
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.month-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--dark);
+}
+
+/* GRID - 3 COLUMN LAYOUT */
+.overview-grid {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: 3fr 2fr 1.5fr;
+  gap: 20px;
+}
+
+/* CARD COMMON STYLING */
+.card {
+  background: #ffffff;
+  border-left: 5px solid var(--primary);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: var(--dark);
+}
+
+/* BAR CHART */
+.chart-area {
+  display: flex;
+  align-items: end;
+  gap: 6px;
+  height: 250px;
+  background: var(--light);
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.bar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bar-fill {
+  width: 80%;
+  background: linear-gradient(var(--primary), var(--deep));
+  border-radius: 5px;
+}
+
+.tooltip {
+  background: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  position: absolute;
+  border: 1px solid var(--primary);
+  font-size: 14px;
+  color: var(--dark);
+  transform: translate(-50%, -100%);
+  white-space: nowrap;
+}
+
+.chart-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: var(--dark);
+}
+
+/* ====== NEW MONTH BUTTONS (HORIZONTAL LINE) ======= */
+
+.months-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 15px;
+
+  white-space: nowrap;        /* NO WRAPPING */
+  overflow-x: auto;           /* ENABLE SIDE SCROLL */
+  padding-bottom: 5px;
+  scrollbar-width: thin;
+}
+
+/* Scrollbar design */
+.months-row::-webkit-scrollbar {
+  height: 6px;
+}
+
+.months-row::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+.month-btn {
+  padding: 4px 6px;
+  min-width: 36px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+
+
+
+.month-btn.active,
+.month-btn:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* TRANSACTION LIST */
+.trans-list {
+  max-height: 350px;
+  overflow-y: auto;
+}
+
+.trans-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  background: var(--light);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.trans-item h4 {
+  margin: 0;
+  color: var(--dark);
+}
+
+.muted {
+  color: #00336699;
+  font-size: 13px;
+}
+
+.avg-row {
+  margin-top: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* LOCKER CARD */
+.locker-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.locker-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.locker-btn {
+  width: 100%;
+  padding: 10px;
+  background: var(--deep);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+}
+
+.locker-btn:hover {
+  background: var(--dark);
+}
+
+.locked {
+  color: #ff6600;
+}
+
+.unlocked {
+  color: #009933;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .overview-grid {
+    grid-template-columns: 1fr;
+  }
+}
